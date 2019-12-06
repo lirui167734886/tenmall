@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <plugins>
+        <!-- 分页插件 -->
+        <plugin interceptor="com.baomidou.mybatisplus.plugins.PaginationInterceptor"/>
+
+        <!-- 打印SQL语句 -->
+        <plugin interceptor="com.baomidou.mybatisplus.plugins.PerformanceInterceptor">
+            <property name="format" value="true"/>
+        </plugin>
+    </plugins>
+
+
+</configuration>
