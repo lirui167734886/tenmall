@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.wanxi.mall.dao.OrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.cn.wanxi.mall.bean.Order">
+        <id column="id" property="id" />
+        <result column="total_num" property="totalNum" />
+        <result column="total_money" property="totalMoney" />
+        <result column="pre_money" property="preMoney" />
+        <result column="post_fee" property="postFee" />
+        <result column="pay_money" property="payMoney" />
+        <result column="pay_type" property="payType" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="pay_time" property="payTime" />
+        <result column="consign_time" property="consignTime" />
+        <result column="end_time" property="endTime" />
+        <result column="close_time" property="closeTime" />
+        <result column="shipping_name" property="shippingName" />
+        <result column="shipping_code" property="shippingCode" />
+        <result column="username" property="username" />
+        <result column="buyer_message" property="buyerMessage" />
+        <result column="buyer_rate" property="buyerRate" />
+        <result column="receiver_contact" property="receiverContact" />
+        <result column="receiver_mobile" property="receiverMobile" />
+        <result column="receiver_address" property="receiverAddress" />
+        <result column="source_type" property="sourceType" />
+        <result column="transaction_id" property="transactionId" />
+        <result column="order_status" property="orderStatus" />
+        <result column="pay_status" property="payStatus" />
+        <result column="consign_status" property="consignStatus" />
+        <result column="is_delete" property="isDelete" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, total_num, total_money, pre_money, post_fee, pay_money, pay_type, create_time, update_time, pay_time, consign_time, end_time, close_time, shipping_name, shipping_code, username, buyer_message, buyer_rate, receiver_contact, receiver_mobile, receiver_address, source_type, transaction_id, order_status, pay_status, consign_status, is_delete
+    </sql>
+
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.wanxi.mall.dao.CategoryMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.cn.wanxi.mall.bean.CategoryReport">
+        <id column="category_id1" property="categoryId1" />
+        <result column="category_id2" property="categoryId2" />
+        <result column="category_id3" property="categoryId3" />
+        <result column="count_date" property="countDate" />
+        <result column="num" property="num" />
+        <result column="money" property="money" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        category_id1, category_id2, category_id3, count_date, num, money
+    </sql>
+
+</mapper>

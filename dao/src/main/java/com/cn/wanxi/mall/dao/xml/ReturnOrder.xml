@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.wanxi.mall.dao.ReturnOrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.cn.wanxi.mall.bean.ReturnOrder">
+        <id column="id" property="id" />
+        <result column="order_id" property="orderId" />
+        <result column="apply_time" property="applyTime" />
+        <result column="user_id" property="userId" />
+        <result column="user_account" property="userAccount" />
+        <result column="linkman" property="linkman" />
+        <result column="linkman_mobile" property="linkmanMobile" />
+        <result column="联系人手机" property="联系人手机" />
+        <result column="return_money" property="returnMoney" />
+        <result column="is_return_freight" property="isReturnFreight" />
+        <result column="status" property="status" />
+        <result column="dispose_time" property="disposeTime" />
+        <result column="return_cause" property="returnCause" />
+        <result column="evidence" property="evidence" />
+        <result column="description" property="description" />
+        <result column="remark" property="remark" />
+        <result column="admin_id" property="adminId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, order_id, apply_time, user_id, user_account, linkman, linkman_mobile, 联系人手机, return_money, is_return_freight, status, dispose_time, return_cause, evidence, description, remark, admin_id
+    </sql>
+
+</mapper>

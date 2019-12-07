@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.wanxi.mall.dao.OrderConfigMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.cn.wanxi.mall.bean.OrderConfig">
+        <id column="id" property="id" />
+        <result column="order_timeout" property="orderTimeout" />
+        <result column="seckill_timeout" property="seckillTimeout" />
+        <result column="take_timeout" property="takeTimeout" />
+        <result column="service_timeout" property="serviceTimeout" />
+        <result column="comment_timeout" property="commentTimeout" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, order_timeout, seckill_timeout, take_timeout, service_timeout, comment_timeout
+    </sql>
+
+</mapper>
