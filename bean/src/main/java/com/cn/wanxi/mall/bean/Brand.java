@@ -6,10 +6,20 @@ import java.io.Serializable;
  * @Author: LucioWade
  * @Date: 17:42 2019/11/26
  */
-
 public class Brand implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    public Brand() {
+    }
+
+    public Brand(int id, String name, String image, Character letter, Integer seq) {
+        this.id = id;
+        this.name = name;
+        this.image = image;
+        this.letter = letter;
+        this.seq = seq;
+    }
 
     private Integer id;
 
@@ -59,5 +69,16 @@ public class Brand implements Serializable {
 
     public void setSeq(Integer seq) {
         this.seq = seq;
+    }
+
+    @Override
+    public String toString() {
+        return "Brand{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", image='" + image + '\'' +
+                ", letter=" + letter +
+                ", seq=" + seq +
+                '}';
     }
 }
