@@ -10,50 +10,85 @@ public class UploadFileResponse implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private String fileName;
+//    private String fileName;
+//
+//    private String fileDownloadUri;
+//
+//    private String fileType;
+//
+//    private long size;
+//
+//    public UploadFileResponse(String fileName, String fileDownloadUri, String fileType, long size) {
+//        this.fileName = fileName;
+//        this.fileDownloadUri = fileDownloadUri;
+//        this.fileType = fileType;
+//        this.size = size;
+//    }
+//
+//    public String getFileName() {
+//        return fileName;
+//    }
+//
+//    public void setFileName(String fileName) {
+//        this.fileName = fileName;
+//    }
+//
+//    public String getFileDownloadUri() {
+//        return fileDownloadUri;
+//    }
+//
+//    public void setFileDownloadUri(String fileDownloadUri) {
+//        this.fileDownloadUri = fileDownloadUri;
+//    }
+//
+//    public String getFileType() {
+//        return fileType;
+//    }
+//
+//    public void setFileType(String fileType) {
+//        this.fileType = fileType;
+//    }
+//
+//    public long getSize() {
+//        return size;
+//    }
+//
+//    public void setSize(long size) {
+//        this.size = size;
+//    }
 
-    private String fileDownloadUri;
+    private Integer code;
 
-    private String fileType;
+    private String filepath;
 
-    private long size;
+    public UploadFileResponse() {}
 
-    public UploadFileResponse(String fileName, String fileDownloadUri, String fileType, long size) {
-        this.fileName = fileName;
-        this.fileDownloadUri = fileDownloadUri;
-        this.fileType = fileType;
-        this.size = size;
+    public UploadFileResponse(Integer code, String filepath) {
+        this.code = code;
+        this.filepath = filepath;
     }
 
-    public String getFileName() {
-        return fileName;
+    public Integer getCode() {
+        return code;
     }
 
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
+    public void setCode(Integer code) {
+        this.code = code;
     }
 
-    public String getFileDownloadUri() {
-        return fileDownloadUri;
+    public String getFilepath() {
+        return filepath;
     }
 
-    public void setFileDownloadUri(String fileDownloadUri) {
-        this.fileDownloadUri = fileDownloadUri;
+    public void setFilepath(String filepath) {
+        this.filepath = filepath;
     }
 
-    public String getFileType() {
-        return fileType;
-    }
-
-    public void setFileType(String fileType) {
-        this.fileType = fileType;
-    }
-
-    public long getSize() {
-        return size;
-    }
-
-    public void setSize(long size) {
-        this.size = size;
+    @Override
+    public String toString() {
+        return "UploadFileResponse{" +
+                "code=" + code +
+                ", filepath='" + filepath + '\'' +
+                '}';
     }
 }
