@@ -1,10 +1,12 @@
 package com.cn.wanxi.mall.bean;
 
+import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * <p>
@@ -109,10 +111,137 @@ public class Spu implements Serializable {
      */
     private String status;
 
+    /**
+     * sku列表
+     */
+    @TableField(exist = false)
+    private List<Sku> skuList;
+
+    public Spu() {
+    }
+
+    public Spu(String sn, String name, String caption,
+               Integer brandId, Integer category1Id,
+               Integer category2Id, Integer category3Id,
+               Integer templateId, Integer freightId,
+               String image, String images, String saleService,
+               String introduction, String specItems, String paraItems,
+               Integer saleNum, Integer commentNum, String isMarketable,
+               String isEnableSpec, String isDelete, String status,
+               List<Sku> skuList) {
+        this.sn = sn;
+        this.name = name;
+        this.caption = caption;
+        this.brandId = brandId;
+        this.category1Id = category1Id;
+        this.category2Id = category2Id;
+        this.category3Id = category3Id;
+        this.templateId = templateId;
+        this.freightId = freightId;
+        this.image = image;
+        this.images = images;
+        this.saleService = saleService;
+        this.introduction = introduction;
+        this.specItems = specItems;
+        this.paraItems = paraItems;
+        this.saleNum = saleNum;
+        this.commentNum = commentNum;
+        this.isMarketable = isMarketable;
+        this.isEnableSpec = isEnableSpec;
+        this.isDelete = isDelete;
+        this.status = status;
+        this.skuList=skuList;
+    }
+
+    public Spu(Integer id, String sn, String name, String caption, Integer brandId, Integer category1Id, Integer category2Id, Integer category3Id, Integer templateId, Integer freightId, String image, String images, String saleService, String introduction, String specItems, String paraItems, Integer saleNum, Integer commentNum, String isMarketable, String isEnableSpec, String isDelete, String status) {
+        this.id = id;
+        this.sn = sn;
+        this.name = name;
+        this.caption = caption;
+        this.brandId = brandId;
+        this.category1Id = category1Id;
+        this.category2Id = category2Id;
+        this.category3Id = category3Id;
+        this.templateId = templateId;
+        this.freightId = freightId;
+        this.image = image;
+        this.images = images;
+        this.saleService = saleService;
+        this.introduction = introduction;
+        this.specItems = specItems;
+        this.paraItems = paraItems;
+        this.saleNum = saleNum;
+        this.commentNum = commentNum;
+        this.isMarketable = isMarketable;
+        this.isEnableSpec = isEnableSpec;
+        this.isDelete = isDelete;
+        this.status = status;
+    }
+
+    public boolean getCID(Spu spu){
+        if (spu.getSn()==null){
+            return false;
+        }
+        if (spu.getName()==null){
+            return false;
+        }
+        if (spu.getCaption()==null){
+            return false;
+        }
+        if (spu.getImage()==null){
+            return false;
+        }
+        if (spu.getImages()==null){
+            return false;
+        }
+        if (spu.getIntroduction()==null){
+            return false;
+        }
+        if (spu.getSkuList()==null){
+            return false;
+        }
+        return true;
+    }
+    public boolean getAll(Spu spu){
+        if (spu.getId()==null){
+            return false;
+        }
+        if (spu.getSn()==null){
+            return false;
+        }
+        if (spu.getName()==null){
+            return false;
+        }
+        if (spu.getCaption()==null){
+            return false;
+        }
+        if (spu.getImage()==null){
+            return false;
+        }
+        if (spu.getImages()==null){
+            return false;
+        }
+        if (spu.getIntroduction()==null){
+            return false;
+        }
+        if (spu.getSkuList()==null){
+            return false;
+        }
+        return true;
+    }
+
+    public List<Sku> getSkuList() {
+        return skuList;
+    }
+
+    public void setSkuList(List<Sku> skuList) {
+        this.skuList = skuList;
+    }
 
     public Integer getId() {
         return id;
     }
+
 
     public void setId(Integer id) {
         this.id = id;
@@ -312,5 +441,12 @@ public class Spu implements Serializable {
         ", isDelete=" + isDelete +
         ", status=" + status +
         "}";
+    }
+
+    public static boolean isNull(Spu spu){
+        if (spu!=null){
+            return true;
+        }
+        return false;
     }
 }

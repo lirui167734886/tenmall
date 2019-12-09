@@ -122,7 +122,7 @@
         </dependency>
     </dependencies>
 
-<!--    <build>-->
+    <build>
 <!--        <plugins>-->
 <!--            <plugin>-->
 <!--                <groupId>org.springframework.boot</groupId>-->
@@ -132,6 +132,17 @@
 <!--                </configuration>-->
 <!--            </plugin>-->
 <!--        </plugins>-->
-<!--    </build>-->
+        <resources>
+            <!-- 如果不加，那么打包的时候mapper文件不会被加载进来 -->
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+    </build>
 
 </project>

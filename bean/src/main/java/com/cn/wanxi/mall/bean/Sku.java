@@ -98,6 +98,78 @@ public class Sku implements Serializable {
      */
     private String status;
 
+    public boolean getCID(Sku sku){
+        if (sku.getSn()==null){
+            return false;
+        }
+        if (sku.getName()==null){
+            return false;
+        }
+        if (sku.getPrice()==null){
+            return false;
+        }
+        if (sku.getImage()==null){
+            return false;
+        }
+        if (sku.getImages()==null){
+            return false;
+        }
+        if (sku.getWeight()==null){
+            return false;
+        }
+        if (sku.getAlertNum()==null){
+            return false;
+        }
+        if (sku.getNum()==null){
+            return false;
+        }
+        if (sku.getSpec()==null){
+            return false;
+        }
+        if (sku.getStatus()==null){
+            return false;
+        }
+        return true;
+    }
+    public boolean getAll(Sku sku){
+        if (sku.getId()==null){
+            return false;
+        }
+        if (sku.getSpuId()==null){
+            return false;
+        }
+        if (sku.getName()==null){
+            return false;
+        }
+        if (sku.getSn()==null){
+            return false;
+        }
+        if (sku.getPrice()==null){
+            return false;
+        }
+        if (sku.getImage()==null){
+            return false;
+        }
+        if (sku.getImages()==null){
+            return false;
+        }
+        if (sku.getWeight()==null){
+            return false;
+        }
+        if (sku.getAlertNum()==null){
+            return false;
+        }
+        if (sku.getNum()==null){
+            return false;
+        }
+        if (sku.getSpec()==null){
+            return false;
+        }
+        if (sku.getStatus()==null){
+            return false;
+        }
+        return true;
+    }
 
     public Integer getId() {
         return id;
