@@ -11,6 +11,12 @@
         <plugin interceptor="com.baomidou.mybatisplus.plugins.PerformanceInterceptor">
             <property name="format" value="true"/>
         </plugin>
+
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!--分页参数合理化  -->
+            <property name="reasonable" value="true"/>
+            <property name="helperDialect" value="mysql"/>
+        </plugin>
     </plugins>
 
 
