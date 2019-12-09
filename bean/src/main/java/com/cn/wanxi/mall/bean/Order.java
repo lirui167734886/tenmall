@@ -7,7 +7,9 @@ import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
 
 import java.io.Serializable;
+import java.lang.reflect.Array;
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * <p>
@@ -179,6 +181,16 @@ public class Order  implements Serializable {
      */
     private String isDelete;
 
+    private List<OrderItem> list;
+
+
+    public List<OrderItem> getList() {
+        return list;
+    }
+
+    public void setList(List<OrderItem> list) {
+        this.list = list;
+    }
 
     public Integer getId() {
         return id;

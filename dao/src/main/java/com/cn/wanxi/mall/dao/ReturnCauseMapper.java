@@ -2,6 +2,9 @@ package com.cn.wanxi.mall.dao;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.cn.wanxi.mall.bean.ReturnCause;
+import org.apache.ibatis.annotations.Select;
+
+import java.util.List;
 
 /**
  * <p>
@@ -12,5 +15,6 @@ import com.cn.wanxi.mall.bean.ReturnCause;
  * @since 2019-11-26
  */
 public interface ReturnCauseMapper extends BaseMapper<ReturnCause> {
+
 
 }

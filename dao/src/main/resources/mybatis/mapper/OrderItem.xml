@@ -27,4 +27,5 @@
         id, category_id1, category_id2, category_id3, spu_id, sku_id, order_id, name, price, num, money, pay_money, image, weight, post_fee, is_return
     </sql>
 
+
 </mapper>

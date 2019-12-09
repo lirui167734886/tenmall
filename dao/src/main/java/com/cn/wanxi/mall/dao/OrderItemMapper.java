@@ -3,6 +3,8 @@ package com.cn.wanxi.mall.dao;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.cn.wanxi.mall.bean.OrderItem;
 
+import java.util.List;
+
 /**
  * <p>
  *  Mapper 接口

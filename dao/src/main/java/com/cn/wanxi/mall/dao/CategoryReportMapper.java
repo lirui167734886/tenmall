@@ -2,6 +2,9 @@ package com.cn.wanxi.mall.dao;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.cn.wanxi.mall.bean.CategoryReport;
+import org.apache.ibatis.annotations.Select;
+
+import java.util.List;
 
 
 /**
@@ -13,5 +16,7 @@ import com.cn.wanxi.mall.bean.CategoryReport;
  * @since 2019-11-26
  */
 public interface CategoryReportMapper extends BaseMapper<CategoryReport> {
+
+
 
 }
