@@ -62,6 +62,11 @@ public class BrandServiceImpl extends ResultDTO implements BrandService {
         return this.resultHandle(brandMapper.deleteBrandById(id));
     }
 
+    @Override
+    public Brand selectOneByName(String name) {
+        return brandMapper.selectOneByName(name);
+    }
+
     private ResultDTO resultHandle(int count) {
         if (count > 0) {
             return success("success");

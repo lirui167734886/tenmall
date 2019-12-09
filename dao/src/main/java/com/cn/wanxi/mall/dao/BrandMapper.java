@@ -31,6 +31,15 @@ public interface BrandMapper {
     Brand selectOneById(int id);
 
     /**
+     * find a brand by name
+     *
+     * @param name brand name
+     * @return brand
+     */
+    @Select("select * from wx_tab_brand where name = #{name}")
+    Brand selectOneByName(String name);
+
+    /**
      * find a brand list by name
      *
      * @param name brand name

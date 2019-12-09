@@ -77,4 +77,12 @@ public interface BrandService {
      */
     ResultDTO deleteBrandById(int id);
 
+    /**
+     * find a brand by name
+     *
+     * @param name brand name
+     * @return brand
+     */
+    Brand selectOneByName(String name);
+
 }

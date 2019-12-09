@@ -45,6 +45,11 @@ public class BrandController {
         return brandService.findOneById(id);
     }
 
+    @GetMapping("findByName")
+    public Brand findOneByName(@RequestParam("name") String name) {
+        return brandService.selectOneByName(name);
+    }
+
     @PostMapping("add")
     public ResultDTO addBrand(@RequestParam("name") String name, @RequestParam("image") String image,
                               @RequestParam("letter") char letter, @RequestParam("seq") int seq) {
