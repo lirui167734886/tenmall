@@ -194,7 +194,7 @@ public class SpuServiceImpl extends ServiceImpl<SpuMapper, Spu> implements SpuSe
         EntityWrapper<Spu> wrapper = new EntityWrapper<>();
         Page<Spu> spus;
         if (brandName != null) {
-            spu.setBrandId(bs.selectOneByName(brandName));
+            spu.setBrandId(bs.selectOneByName(brandName).getId());
         }
         if (spu.getName() != null || spu.getCaption() != null || spu.getBrandId() != null) {
             spus = this.selectPage(spuPage, wrapper.ne(spu.getName() == null, "name", spu.getName())
