@@ -12,6 +12,7 @@ import javax.sql.DataSource;
 
 /**
  * MyBatis的配置文件
+ * @author Lucio
  */
 @SpringBootConfiguration
 public class MybatisConfig {
