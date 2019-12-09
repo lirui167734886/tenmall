@@ -36,7 +36,6 @@ public class FileServiceImpl implements FileService {
 
     @PostConstruct
     public void init() {
-        fileProperties.setUploadDir("./uploads");
         this.fileStorageLocation = Paths.get(fileProperties.getUploadDir()).toAbsolutePath().normalize();
         try {
             Files.createDirectories(this.fileStorageLocation);
